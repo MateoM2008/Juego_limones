@@ -80,7 +80,6 @@ function detectarAtrapado(){
         }else if(puntaje==10){  
             alert("YA TIENES LOS LIMONES PARA TU LIMONADA")
             clearInterval(intervalo);
-            
         }
     }
 }
@@ -101,4 +100,16 @@ function detectarPiso(){
             clearInterval(intervalo);
         }
     }
+}
+
+
+function reiniciar(){
+    vidas=3
+    puntaje=0;
+    mostrarEnSpam("txtVidas",vidas)
+    mostrarEnSpam("txtPuntaje",puntaje)
+    velocidadCaida=200;
+    personajeX=canvas.width/2;
+    personajeY=canvas.height-(ALTURA_SUELO+ALTURA_PERSONAJE)
+    iniciar();
 }
